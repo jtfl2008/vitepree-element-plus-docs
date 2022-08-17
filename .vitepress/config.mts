@@ -1,9 +1,10 @@
-import type { UserConfig } from 'vitepress'
-import { mdPlugin } from './config/plugins'
-import { sidebars } from './config/sidebars'
-import { nav } from './config/nav'
+import type { UserConfig } from 'vitepress';
+import { mdPlugin } from './config/plugins';
+import { sidebars } from './config/sidebars';
+import { nav } from './config/nav';
 
 export default {
+  base: '/vitepree-element-plus-docs/',
   title: 'Element Plus',
   description: 'a Vue 3 based component library for designers and developers',
   head: [
@@ -13,7 +14,7 @@ export default {
         rel: 'icon',
         href: '/images/element-plus-logo-small.svg',
         type: 'image/svg+xm',
-      }
+      },
     ],
     [
       'link',
@@ -55,10 +56,10 @@ export default {
   ],
   themeConfig: {
     sidebars,
-    nav
+    nav,
   },
   lang: 'zh-CN',
   markdown: {
     config: (md) => mdPlugin(md),
   },
-} as UserConfig
+} as UserConfig;
